@@ -28,9 +28,11 @@ For firefox, you'll need to add all the CSS code to your `userContent.css` file:
 
 To be determined. If someone has experience with this please pull request.
 
-#### Edge
+#### Edge (Chromium)
 
-To be determined. If someone has experience with this please pull request.
+1. Add [Code Injector extension](https://microsoftedge.microsoft.com/addons/detail/code-injector/kgmlfocfgenookigofalapefagndnlnc)
+1. Remove `@-moz-document domain("ycombinator.com") {` from `hacker95.css`
+1. Copy modified css into the Code Injector extension for the [Hacker News site](https://news.ycombinator.com/)
 
 #### Safari
 
