@@ -60,10 +60,10 @@
 		padding: 4px !important;
 		font-size: 13.3333px !important;
 		text-align: center !important;
-		border-left: 1px solid var(--dark-gray-95) !important;
-		border-top: 1px solid var(--dark-gray-95) !important;
-		border-right: 1px solid var(--white-95) !important;
-		border-bottom: 1px solid var(--white-95) !important;
+		border-left: 1px solid var(--white-95) !important;
+		border-top: 1px solid var(--white-95) !important;
+		border-right: 1px solid var(--dark-gray-95) !important;
+		border-bottom: 1px solid var(--dark-gray-95) !important;
 		padding: 2px !important;
 		flex-grow: 1 !important;
 		margin-right: 3px !important;
@@ -206,10 +206,10 @@
 
 	.yclinks a {
 		font-size: 10.6667px !important;
-		border-left: 1px solid var(--dark-gray-95) !important;
-		border-top: 1px solid var(--dark-gray-95) !important;
-		border-right: 1px solid var(--white-95) !important;
-		border-bottom: 1px solid var(--white-95) !important;
+		border-left: 1px solid var(--white-95) !important;
+		border-top: 1px solid var(--white-95) !important;
+		border-right: 1px solid var(--dark-gray-95) !important;
+		border-bottom: 1px solid var(--dark-gray-95) !important;
 		padding: 2px !important;
 		flex-grow: 1 !important;
 		margin-right: 3px !important;
