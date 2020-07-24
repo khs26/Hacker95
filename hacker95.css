@@ -310,5 +310,11 @@
 		-moz-appearance: none;
 	}
 
+
+	/*Comment Pages*/
+	td.ind img {
+		display: inline !important;
+	}
+
 }
 
