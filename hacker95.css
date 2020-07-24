@@ -1,0 +1,314 @@
+/**
+ * Created by Chowder Man
+ * https://github.com/chowderman/Hacker95
+ */
+@-moz-document domain("ycombinator.com") {
+
+	/*Variables*/
+	:root {
+		--white-95: #fff;
+		--light-gray-95: #dfdfdf;
+		--gray-95: #c0c0c0;
+		--dark-gray-95: #808080;
+		--black-95: #000;
+		--blue-95: #020080;
+	}
+
+	/*Adding some base styling to the whole page*/
+	body, html {
+		background-color: var(--gray-95) !important;
+	}
+
+	/*The Y image at top of the page*/
+	img[src="y18.gif"] {
+		display: none !important;
+	}
+
+	/*The td for the Y image*/
+	td[style="width:18px;padding-right:4px"] {
+		background-size: 10px 10px !important;
+		background-repeat: no-repeat, repeat;
+		display: none !important;
+	}
+
+	/*The header bar*/
+	#hnmain > tbody > tr:nth-child(1) table {
+		background-color: var(--gray-95) !important;
+		padding-bottom: 3px !important;
+	}
+
+	/*Also used in the header bar*/
+	.pagetop {
+		/*This will remove all the pipe characters*/
+		font-size: 0px !important;
+		color: var(--gray-95) !important; 
+		display: flex !important;
+		/*Used to increment the top buttons downwards to fit the hacker news header*/
+		margin-top: 24px
+	}
+
+	/*All of the links at the header bar (such as new, past, comments, etc)*/
+	.pagetop a {
+		background-color: var(--gray-95) !important;
+		/*box-shadow: 
+		inset -1px -1px var(--black-95),
+		inset 1px 1px var(--white-95),
+		inset -2px -2px var(--dark-gray-95),
+		inset 2px 2px var(--light-gray-95)
+		!important;*/
+		flex-grow: 1 !important;
+		padding: 4px !important;
+		font-size: 13.3333px !important;
+		text-align: center !important;
+		border-left: 1px solid var(--dark-gray-95) !important;
+		border-top: 1px solid var(--dark-gray-95) !important;
+		border-right: 1px solid var(--white-95) !important;
+		border-bottom: 1px solid var(--white-95) !important;
+		padding: 2px !important;
+		flex-grow: 1 !important;
+		margin-right: 3px !important;
+	}
+
+	.pagetop a:active {
+		 box-shadow: 
+		inset 1px 1px var(--black-95),
+		inset -1px -1px var(--white-95),
+		inset 2px 2px var(--dark-gray-95),
+		inset -2px -2px var(--light-gray-95)
+		!important;
+		outline: 1px dotted #000;
+		outline-offset: -5px;
+	}
+
+	/*The Hacker News button in the headers*/
+	.pagetop b * {
+		font-size: 13.3333px !important;
+		padding-top: 2px !important;
+		padding-bottom: 1px !important;
+		margin-right: 0px !important;
+		position: absolute !important;
+		margin-top: -29px !important;
+		box-shadow: inset 0px 0px black !important;
+		background-image: linear-gradient(90deg,navy,#1084d0);
+		left: 8%;
+		right: 8%;
+		text-align: center;
+		color: white !important;
+		font-size: 20px !important;
+		height: 22px !important;
+	}
+
+	/*Removing the margin from the container for the Hacker News header text*/
+	.hnname {
+		margin-right: 0px !important;
+	}
+
+	/*Media Query to change the header bar for smaller screen sizes*/
+	@media only screen
+	and (min-width : 300px)
+	and (max-width : 750px) {
+		span.pagetop b * {
+			left: 0%;
+			right: 0%;
+		margin-top: -17px !important;
+		}
+	}
+
+	/*The gap between the header bar and the topics*/
+	#hnmain > tbody > tr:nth-child(2) {
+		display: none !important;
+	}
+
+	/*Container for the content*/
+	.itemlist {
+		width: 100% !important;
+		padding-bottom: 10px !important;
+	}
+
+	/*Adding highlighting and spacing between all topics*/
+	.itemlist > tbody > tr:nth-child(3n-2) > td {
+		padding-bottom: 6px !important;
+		padding-top: 6px !important;
+	}
+
+	.itemlist > tbody > tr:nth-child(3n-2):hover * {
+		background-color: var(--blue-95) !important;
+		color: var(--white-95) !important;
+	}
+
+
+	/*Adding borders around the content container*/
+	#hnmain > tbody > tr:nth-child(3) {
+		background-color: #fff !important;
+		border-top: 1px solid #000 !important;
+		border-left: 1px solid #000 !important;
+		border-bottom: 1px solid #dfdfdf !important;
+		border-right: 1px solid #dfdfdf !important;
+		box-shadow: 
+		inset 1px 1px var(--dark-gray-95),
+		inset -1px -1px var(--white-95),
+		inset 2px 2px var(--black-95),
+		inset -2px -2px var(--light-gray-95)
+		!important;
+	}
+
+	/*The login button*/
+	td[style="text-align:right;padding-right:4px;"] {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		margin: 0px !important;
+	}
+
+	td[style="text-align:right;padding-right:4px;"] a {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		margin: 0px !important;
+		margin-right: 0px !important;
+	}
+
+	a[href="login?goto=news"] {
+		margin-right: 0px !important;
+	}
+
+	/*Modifying the background color of the footer bar*/
+	#hnmain > tbody > tr:nth-child(4) {
+		background-color: var(--gray-95) !important;
+	}
+
+	/*Removing the orange line of the footer bar*/
+	td[bgcolor="#ff6600"] {
+		background-color: var(--gray-95) !important;
+	}
+
+	#hnmain > tbody > tr:nth-child(4) center {
+		text-align: left !important;
+		
+	}
+
+	#hnmain > tbody > tr:nth-child(4) table {
+		display: none !important;
+	}
+
+	#hnmain > tbody > tr:nth-child(4) table ~ br {
+		display: none !important;
+	}
+
+	img[src="s.gif"] {
+		display: none !important;
+	}
+
+	/*The various links in the footer bar at the bottom*/
+	.yclinks {
+		font-size: 0px !important;
+		display: flex !important;
+		padding-top: 3px !important;
+	}
+
+	.yclinks a {
+		font-size: 10.6667px !important;
+		border-left: 1px solid var(--dark-gray-95) !important;
+		border-top: 1px solid var(--dark-gray-95) !important;
+		border-right: 1px solid var(--white-95) !important;
+		border-bottom: 1px solid var(--white-95) !important;
+		padding: 2px !important;
+		flex-grow: 1 !important;
+		margin-right: 3px !important;
+	}
+
+	.yclinks a:active {
+	  /*box-shadow: 
+		inset 1px 1px var(--black-95),
+		inset -1px -1px var(--white-95),
+		inset 2px 2px var(--dark-gray-95),
+		inset -2px -2px var(--light-gray-95)
+		!important;*/
+		outline: 1px dotted #000;
+		outline-offset: -3px;
+	}
+
+	.yclinks a:last-child {
+		margin-right: 0px !important;
+	}
+
+	/*Removing all <br> tags in the bottom*/
+	#hnmain > tbody > tr:nth-child(4) br {
+		display: none !important;
+	}
+
+	/*Inputs used in both the main page for the bottom search and for the login page*/
+	form input[type="text"],
+	form input[type="password"]{
+		box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a !important;
+		border: 0px solid black !important;
+		height: 21px !important;
+		padding: 3px 4px !important;
+		font-size: 10.6667px !important;
+	}
+
+	form {
+		color: var(--black-95) !important;
+		padding-top: 4px !important;
+	}
+
+
+	/*Login Page*/
+	/*Submit buttons, such as found on the login page and submission page*/
+	input[type="submit"] {
+		font-size: 11px;
+		box-sizing: border-box;
+		border: none;
+		background: silver;
+		box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+		border-radius: 0;
+		min-width: 75px;
+		min-height: 23px;
+		padding: 0 12px;
+	}
+
+	input[type="submit"]:active {
+		box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+	}
+
+
+	/*Submission Page*/
+	html[op="submit"] #hnmain * {
+		color: black !important;
+	}
+
+	textarea {
+		background-color: rgb(255, 255, 255) !important;
+		border-bottom-color: rgb(0, 0, 0) !important;
+		border-bottom-left-radius: 0px !important;
+		border-bottom-right-radius: 0px !important;
+		border-bottom-style: none !important;
+		border-bottom-width: 0px !important;
+		border-image-outset: 0 !important;
+		border-image-repeat: stretch !important;
+		border-image-slice: 100% !important;
+		border-image-source: none !important;
+		border-image-width: 1 !important;
+		border-left-color: rgb(0, 0, 0) !important;
+		border-left-style: none !important;
+		border-left-width: 0px !important;
+		border-right-color: rgb(0, 0, 0) !important;
+		border-right-style: none !important;
+		border-right-width: 0px !important;
+		border-top-color: rgb(0, 0, 0) !important;
+		border-top-left-radius: 0px !important;
+		border-top-right-radius: 0px !important;
+		border-top-style: none !important;
+		border-top-width: 0px !important;
+		box-shadow: rgb(255, 255, 255) -1px -1px 0px 0px inset, rgb(128, 128, 128) 1px 1px 0px 0px inset, rgb(223, 223, 223) -2px -2px 0px 0px inset, rgb(10, 10, 10) 2px 2px 0px 0px inset !important;
+		box-sizing: border-box !important;
+		color: rgb(0, 0, 0) !important;
+		font-size: 11px !important;
+		margin-top: 6px !important;
+		padding-bottom: 3px !important;
+		padding-left: 4px !important;
+		padding-right: 4px !important;
+		padding-top: 3px !important;
+		-moz-appearance: none;
+	}
+
+}
+
