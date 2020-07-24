@@ -6,9 +6,9 @@ Hacker95 is a CSS stylesheet that styles Hacker News into a Windows 95/98 styled
 
 ## Installation
 
-Method of installation will differ depending on which browser you are using. First download Hacker95:
+Method of installation will differ depending on which browser you are using. First download Hacker95 and unzip the CSS file from the folder:
 
-* [Hacker98](https://chowderman.github.io/hacker95.css)
+* [Hacker95](https://github.com/chowderman/Hacker95/releases/download/1337/hacker95.css.zip)
 
 #### Firefox
 
